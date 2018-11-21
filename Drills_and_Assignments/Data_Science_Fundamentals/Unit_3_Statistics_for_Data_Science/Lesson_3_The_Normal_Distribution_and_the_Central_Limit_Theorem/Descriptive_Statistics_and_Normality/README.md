@@ -4,7 +4,7 @@ To complete the following drills, you'll need to use your Python skills to creat
 
 For each distribution:
 
-1. Generate a random variable with 100 datapoints using the code `distributionvar = np.random.distributionname([arguments], 100)``, replacing `distributionvar` with an appropriate variable name and `distributionname` with the name of the distribution you’ve chosen, and filling in the empty space in the parentheses with your chosen values for the appropriate parameters. If you feel uncertain about how to do this, go back to the “Other Distributions” assignment for examples of code to use as a starting point.
+1. Generate a random variable with 100 datapoints using the code `distributionvar = np.random.distributionname([arguments], 100)`, replacing `distributionvar` with an appropriate variable name and `distributionname` with the name of the distribution you’ve chosen, and filling in the empty space in the parentheses with your chosen values for the appropriate parameters. If you feel uncertain about how to do this, go back to the “Other Distributions” assignment for examples of code to use as a starting point.
 
 2. Graph the variable using a histogram.
 
