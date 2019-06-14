@@ -41,7 +41,7 @@ Diabetes is a chronic disease, we have not found an effective cure so far, it is
 
 **Complete notebook**: [Modeling](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%201/Modeling)
 
-[**Complete report**] 
+[**Complete report**](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%201/Report) 
 
 ## References
 1. Hogan P , Dall T , Nikolov P . Economic costs of diabetes in the US in 2002. Diabetes Care. 2003;26(3):917–932.

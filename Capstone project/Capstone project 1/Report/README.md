@@ -93,8 +93,7 @@ We can see that the most important feature we generated for this model is the co
 
 ### References
 1. Hogan P , Dall T , Nikolov P . Economic costs of diabetes in the US in 2002. Diabetes Care. 2003;26(3):917–932.
-2. Narayan K M , Boyle J P , Thompson T J , Sorensen S W , Williamson D F . Lifetime risk for diabetes mellitus in the United States. JAMA. 2003;290(14):1884–1890.
-3. 
+2. Narayan K M , Boyle J P , Thompson T J , Sorensen S W , Williamson D F . Lifetime risk for diabetes mellitus in the United States. JAMA. 2003;290(14):1884–1890. 
 
 
 
