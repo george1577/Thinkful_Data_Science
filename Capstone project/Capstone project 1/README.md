@@ -81,9 +81,12 @@ In this project, as stated in the beginning, our goal is to find the best model 
 
 1. BMI is the strongest factor among all that relates to diabetes, the average BMI value difference between diabetic and non-diabetic group is statistically significant, the p-value is at the order of 1e-19. We can see from the following graph the mean difference between diabetic and non-diabetic group is huge.
 ![BMI](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%201/Images/BMI.png)
-2. When using accuracy score as the error metric, the models that performs the best on the test set are `SVM_median-min-max`, `SVM_mean-min-max`, `Naive_Bayes_mean-z-score` and `Naive_Bayes_mean-min-max`, we further compare those four using bootstrapping method, we can see the former two outbeat the later two in accuracy score, the consistency is about the same between four. The t-test further distinguished the difference between the former two, we can conclude that `SVM_median-min-max` is our best model in terms of accuracy score, the follow graph shows the bootstrapping result with 2000 iterations.
-3. 
-3. When using f1 score as the error metric, the models 
+2. When using accuracy score as the error metric, the models that performs the best on the test set are `SVM_median-min-max`, `SVM_mean-min-max`, `Naive_Bayes_mean-z-score` and `Naive_Bayes_mean-min-max`, we further compare those four using bootstrapping method, the former two outbeat the later two in accuracy score, the consistency is about the same between four. The t-test further distinguished the difference between the former two, we can conclude that `SVM_median-min-max` is our best model in terms of accuracy score, the follow graph shows the bootstrapping result with 2000 iterations.
+![SVM](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%201/Images/SVMmedian-min-max.png)
+The mean score is 0.77048 and the standard deviation is 0.0425
+3. When using f1 score as the error metric, the models performs the best differed from using accuracy score, we again used the bootstrapping method to see the average performance and consistency of the model, decision tree with PCA data outperformed the other algorithms in terms of f1 score and recall, especially `Decision_tree_median_min_max`, we also used the t-test to double confirm it is indeed the best model. The following graph shows the f1 score and recall distribution of `Decision_tree_median_min_max`
+4. 
+4. b 
 
 
   
