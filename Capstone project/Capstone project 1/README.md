@@ -79,8 +79,11 @@ The modeling fitting process first included the training step to find the best p
 
 In this project, as stated in the beginning, our goal is to find the best model that predicts the onset of diabetes, we have gone through data cleaning, exploratory data analysis, feature engineering and modeling to come up with the following result:
 
-1. BMI is the strongest factor among all that relates to diabetes, the average BMI value difference between diabetic and non-diabetic group is statistically significant, the p-value is at the order of 1e-19.
-2. When using accuracy score as the error metric, the models that performs the best on the test set are `Random forest with median-z-score`, `Random forest with median-min-max`, `SVM with median-min-max` and `SVM with mean-min-max`, we further compare those four using bootstrapping method, however, there  
+1. BMI is the strongest factor among all that relates to diabetes, the average BMI value difference between diabetic and non-diabetic group is statistically significant, the p-value is at the order of 1e-19. We can see from the following graph the mean difference between diabetic and non-diabetic group is huge.
+![BMI](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%201/Images/BMI.png)
+2. When using accuracy score as the error metric, the models that performs the best on the test set are `SVM_median-min-max`, `SVM_mean-min-max`, `Naive_Bayes_mean-z-score` and `Naive_Bayes_mean-min-max`, we further compare those four using bootstrapping method, we can see the former two outbeat the later two in accuracy score, the consistency is about the same between four. The t-test further distinguished the difference between the former two, we can conclude that `SVM_median-min-max` is our best model in terms of accuracy score, the follow graph shows the bootstrapping result with 2000 iterations.
+3. 
+3. When using f1 score as the error metric, the models 
 
 
   
