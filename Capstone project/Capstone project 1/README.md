@@ -65,6 +65,25 @@ Pricipal component analysis(PCA) was also done in this step, it can sometimes ex
 ### Modeling
 #### Summary
 
+In this part, we separated the notebook into two approaches, one using the accuracy score as our error matric and the other using f1 score. Accuracy is a more intuitive approach to use in classification problem, but not suitable in a highly skewed data, since we could basically predict every example as the majority that exists in the dataset and easily gain an 95%(or even more than 99%) score, however the model would be useless to catch the minority.
+
+Our dataset consists of 65% of non-diabetic patients and 35% of diabetic patients, which is not considered highly skewed, thus our first notebook used the accuracy score as the measurement of the model performance, we compared different machine learning algorithms from **Naive Bayes**, **K-nearest neighbors** to **Gradient Boosting** and we also incorporated dataset that were engineered differently in data cleaning and feature engineering steps, our goal is to find out the best algorithm and data combination.
+
+We also used the f1 score as the error metric in our second notebook, since in medical diagnostics, the false negative(telling someone they have no diabetes when they actually have) is likely to have bigger cost than false positive(telling someone they have diabetes when they actually do not), we used precision and recall as our side metrics to help filtering our the best model.
+
+The modeling fitting process first included the training step to find the best parameters that have minimum cost, then we used the cross validation step to fitler our the best hyperparameters for each algorithm and data combination. Those better combination will be used in the test set and see the performance, we will again filter out more in this step, the final round we used the bootstrapping method to see the consistency and the distribution of the score, an ideal model should not vary too much when using out-of-sample data.
+
+**Complete notebook**: [Modeling](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%201/Modeling)
+
+### Conclusions
+
+In this project, as stated in the beginning, our goal is to find the best model that predicts the onset of diabetes, we have gone through data cleaning, exploratory data analysis, feature engineering and modeling to come up with the following result:
+
+1. BMI is the strongest factor among all that relates to diabetes, the average BMI value difference between diabetic and non-diabetic group is statistically significant, the p-value is at the order of 1e-19.
+2. When using accuracy score as the error metric, the models that performs the best on the test set are `Random forest with median-z-score`, `Random forest with median-min-max`, `SVM with median-min-max` and `SVM with mean-min-max`, we further compare those four using bootstrapping method, however, there  
+
+
+  
 
  
  
