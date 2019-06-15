@@ -36,7 +36,7 @@ Diabetes is a chronic disease, we have not found an effective cure so far, it is
 
 ## Modeling
 1. Use different algorithm and data pair to find out the best combination.
-2. Use different error metrics to determine model performance.
+2. Use different evaluation metrics to determine model performance.
 3. Determine the best model in terms of score, training time and consistency of performance.
 
 **Complete notebook**: [Modeling 1](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%201/Modeling), [Modeling 2](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%201/Modeling/Modeling_f1_score.ipynb)

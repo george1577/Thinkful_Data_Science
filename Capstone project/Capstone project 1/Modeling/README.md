@@ -9,7 +9,7 @@
    * Random Forest
    * Support Vector Machine
    * Gradient Boosting
-2. Try different error metrics to evaluate the performance
+2. Try different evaluation metrics to evaluate the performance
    * Accuracy (Check model 1)
    * f1 score (Check model 2)
    * Recall and precision (Check model 2)
