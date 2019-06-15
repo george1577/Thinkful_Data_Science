@@ -73,7 +73,7 @@ We also used the f1 score as the error metric in our second notebook, since in m
 
 The modeling fitting process first included the training step to find the best parameters that have minimum cost, then we used the cross validation step to fitler our the best hyperparameters for each algorithm and data combination. Those better combination will be used in the test set and see the performance, we will again filter out more in this step, the final round we used the bootstrapping method to see the consistency and the distribution of the score, an ideal model should not vary too much when using out-of-sample data.
 
-**Complete notebook**: [Modeling](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%201/Modeling)
+**Complete notebook**: [Modeling 1](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%201/Modeling), [Modeling 2](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%201/Modeling/Modeling_f1_score.ipynb)
 
 ### Conclusions
 
