@@ -1,9 +1,9 @@
 # Capstone Project 1
 
-## Problem: Diabetes Onset Detection
+# Problem: Diabetes Onset Detection
 ![Images](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%201/Images/Diabetes-Care-Devices-Market.png)
 
-### Introduction
+## Introduction
 Diabetes mellitus is characterized by abnormally high levels of sugar (glucose) in the blood. When the amount of glucose in the blood increases, it triggers the release of the hormone insulin from the pancreas. Insulin stimulates muscle and fat cells to remove glucose from the blood and stimulates the liver to metabolize glucose, causing the blood sugar level to decrease to normal levels.
 ![Chart](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%201/Images/Diabetes_chart.jpg)
 
@@ -19,15 +19,15 @@ The dataset includes 768 patients with 8 features and 1 outcome variable:
 4. SkinThickness: Triceps skin fold thickness (mm)
 5. Insulin: 2-Hour serum insulin (mu U/ml)
 6. BMI: Body mass index (weight in kg/(height in m)^2)
-7. DiabetesPedigreeFunction: Diabetes pedigree function
+7. DiabetesPedigreeFunction: Diabetes pedigree function, it provides information about diabetes history in relatives and genetic relationship of those relatives with patients.
 8. Age: Age (years)
 9. Outcome: Class variable (0 or 1)
 
 The goal of this project is to treat all those patients, features and outcome variable as a supervised machine learing problem to predict the onset of diabetes of a particular patient given the features that were previously measured.
 
-### Data Cleaning
+## Data Cleaning
 
-#### Summary
+### Summary
 The dataset was examined first to see whether they consist of any missing values, those values were determined by the impossible values such as 0 mmHg blood pressure. We have used different approaches to impute missing values such as mean and median.
 
 The outliers were dealt with windsorization method, which we set up a top and bottom boundary values as our celing and floor, any value beyond those were reduced/increased to the celing and floor values.
@@ -36,9 +36,9 @@ The training and testing set were also prepared in this step since we need to us
 
 **Complete notebook**: [Data cleaning](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%201/Data%20Cleaning/Data_cleaning.ipynb)
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 
-#### Summary
+### Summary
 Exploratory data analysis(EDA) is an important step to get to know deeper of our dataset. We could understand better of each feature and their correlation to the outcome variable, which gives us ideas for feature seleciton as well as feature engineering when we do the future modeling.
 
 This part has been broken into univariate analysis and bivariate analysis, the former is to find out the distribution and composition of some variables and the later to deal with the relationship between features or between features and outcome variable.
@@ -49,9 +49,9 @@ We have found some features that are more related to the outcome variable than t
 
 **Complete notebook**: [Exploratory data analysis](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%201/Exploratory%20Data%20Analysis/Exploratory_Data_Analysis.ipynb)
 
-### Feature Engineering
+## Feature Engineering
 
-#### Summary
+### Summary
 In the feature engineering step we built a pairplot to understand the features correlation and it was separated into diabetic and non-diabetic group to see if any feature behaved significant differently between those two groups. 
 
 Feature interaction is done by multiplying features together, we selected the feature that has opposite correlation between diabetic and non-diabetic group and hope to further separte the two droups when using the newly generated feature in our model.
@@ -62,8 +62,8 @@ Pricipal component analysis(PCA) was also done in this step, it can sometimes ex
 
 **Complete notebook**: [Feature engineering](http://localhost:8888/notebooks/Desktop/Thinkful/projects/Capstone%201/Feature%20Engineering/Feature%20Engineering.ipynb)
 
-### Modeling
-#### Summary
+## Modeling
+### Summary
 
 In this part, we separated the notebook into two approaches, one using the accuracy score as our evaluation metric and the other using f1 score. Accuracy is a more intuitive approach to use in classification problem, but not suitable in a highly skewed data, since we could basically predict every example as the majority that exists in the dataset and easily gain an 95%(or even more than 99%) score, however the model would be useless to catch the minority.
 
@@ -75,7 +75,7 @@ The modeling fitting process first included the training step to find the best p
 
 **Complete notebook**: [Modeling 1](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%201/Modeling), [Modeling 2](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%201/Modeling/Modeling_f1_score.ipynb)
 
-### Conclusions
+## Conclusions
 
 In this project, as stated in the beginning, our goal is to find the best model that predicts the onset of diabetes, we have gone through data cleaning, exploratory data analysis, feature engineering and modeling to come up with the following result:
 
@@ -91,7 +91,12 @@ The mean score is 0.77048 and the standard deviation is 0.0425
 ![dt_visual](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%201/Images/Decision_tree_visualization.png)
 We can see that the most important feature we generated for this model is the component 1 of PCA, this can explain that the most of the features information is retained in the first component that better separates the non-diabetic and diabetic group, another advantage of the model is the training speed since decision tree is a relatively simple model. One explaination of the random forest did not perform better than the decision tree is because random forest tend to pick the "random features" in each estimator, sometimes it picked the important one like PCA1 but sometimes it did not, thus the overall performance was worse.
 
-### References
+## Next step
+1. Since our data only consists of 768 patients, this might not generalize for out of sample patients, one thing we could do is to collect more training examples to reduce the variance.
+2. The patients are exclusively Pima people, this might be an issue to apply to more general population, we can gather another dataset that have different people nationalwise.
+3. This dataset was collected around 30 years ago, some measurement might be obsolete, one thing we could do is to generate more features from medical technology nowadays.
+
+## References
 1. Hogan P , Dall T , Nikolov P . Economic costs of diabetes in the US in 2002. Diabetes Care. 2003;26(3):917–932.
 2. Narayan K M , Boyle J P , Thompson T J , Sorensen S W , Williamson D F . Lifetime risk for diabetes mellitus in the United States. JAMA. 2003;290(14):1884–1890. 
 
