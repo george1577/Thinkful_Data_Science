@@ -20,7 +20,7 @@ The prediction outcome variable will not only produce a binary value like 0 or 1
 3. Clean rows that has unreasonable value in a certain features.
 4. Prepare training and testing set for both machine learning and deep learning model.
 
-**Complete notebook**: 
+**Complete notebook**: [Data cleaning and wrangling](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%202/Data%20cleaning_wrangling/Data_cleaning.ipynb) 
 
 ## Exploratory Data Analysis
 1. Perform univariate analysis to find out distribution of variables.
@@ -28,7 +28,7 @@ The prediction outcome variable will not only produce a binary value like 0 or 1
 3. Find important features that are highly associated with outcome variable.
 4. Perform statistical hypothesis test.
 
-**Complete notebook**: 
+**Complete notebook**: [Exploratory data analysis](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%202/Exploratory%20Data%20Analysis/Exploratory_Data_Analysis.ipynb) 
 
 ## Feature Engineering
 1. Generate feature interaciton variables.
@@ -37,16 +37,16 @@ The prediction outcome variable will not only produce a binary value like 0 or 1
 4. Perform principal component analysis.
 5. Prepare all the engineered data for both training and testing set.
 
-**Complete notebook**: 
+**Complete notebook**: [Feature engineering](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%202/Feature%20Engineering) 
 
 ## Modeling
 1. Use different algorithm and data pair to find out the best combination.
 2. Compare traditional ML model and deep learning model.
 3. Determine the best model in terms of score, training time and consistency of performance.
 
-**Complete notebook**: 
+**Complete notebook**: [Modeling](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%202/Modeling/Modeling.ipynb)
 
-[**Complete report**]:
+
 
 
 
