@@ -2,7 +2,8 @@
 
 ## Problem: Tennis match prediction
 ![Images](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%202/Images/atp_tennis.jpg)
-
+### Abstract
+In this project, our goal is to use stats from previous matches players played as features to predict their future matches outcome. We used both traditional machine learning models as well as deep learning models to compare the result. We have also done feature selection and engineering to extract the most valuable features for our model. We were able to reach nearly 93% of test set accuracy consistently and also use it to predict the winning/losing percentage of a player in a certain match, which could be a potential application for sports bidding companies to use as a reference to set up the odds of every single upcoming match.
 ### Introduction
 [Tennis](https://en.wikipedia.org/wiki/Tennis) is a racket sport that can be played individually against a single opponent or between two teams of two players each. Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court. The [history](https://en.wikipedia.org/wiki/History_of_tennis) of tennis sports can be traced back to 16th century when it was really popular in royals. 
 
@@ -33,7 +34,7 @@ The ranking system has changed dynamically since introduced, thus we seprate the
 
 Finally, we dealt with training/testing set preparation of both traditional machine learning and deep learning model since they required different format of examples input.
 
-**Complete notebook**: 
+**Complete notebook**: [Data cleaning and wrangling](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%202/Data%20cleaning_wrangling/Data_cleaning.ipynb)
 
 ## Exploratory Data Analysis
 ### Summary
@@ -47,7 +48,7 @@ The current [tennis big 4](https://en.wikipedia.org/wiki/Big_Four_(tennis)) are 
 
 Since there were thousands of features in our training examples, it is impractical to examine all the features one by one and dig out the important ones that were mostly related to the `outcome` variable. In stead, we use our tennis domain knowledge to hand pick some variables and explore the relationship between those variables and the `outome`. 
 
-**Complete notebook**: 
+**Complete notebook**: [Exploratory data analysis](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%202/Exploratory%20Data%20Analysis/Exploratory_Data_Analysis.ipynb)
 
 ## Feature Engineering
 ### Summary
@@ -59,7 +60,7 @@ Feature selection was also done in this notebook, we had thousands of variables 
 
 Another dimension reduction method we used was principal component analysis(PCA), it can sometimes extract useful information and get rid of the redundant information from the original dataset. We set a threshold of 99.5% variance retained to extract about the same number of features as we did in feature selection steps(around 500).
 
-**Complete notebook**: 
+**Complete notebook**: [Feature engineering](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%202/Feature%20Engineering/Feature_engineering.ipynb)
 
 ## Modeling
 ### Summary
@@ -71,16 +72,32 @@ After we found out the best combination and hyperparameters using training and v
 
 As mentioned, the ultimate goal of this project is to build up a good predicting model that can output the winning and losing percentage of a certain player so we could use them to set up the odds. We used the `softmax` activation function in the output layer of RNN to fulfill this goal.
 
-**Complete notebook**: 
+**Complete notebook**: [Modeling](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%202/Modeling/Modeling.ipynb)
 
 ## Conclusions
+In this project, the goal is to create a model to predict the outcome of atp tennis matches and further predict the winning percentage of a certain player in order to have potential applications of setting up the odds for sports bidding companies. We have done data cleaning and wrangling of the raw data on the web, exploratory data analysis, feature engineering and modeling to come up with the following result:
+
+1. We used both statistical-based(p-value) and model-based(feature importance) feature selection method to extract the most important features from our data in order to get rid of redundant features and reduce training time, the following graphs show the top features from both methods, we can see that the top 2 of both method agree with each other. We can also see that the closest match (end with 10) related features seemed to be more important to the model, this made total sense since those features were supposed to reflect a player's current condition. 
+![image](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%202/Images/feature_selection.png)
+2. In traditional model, gradient boosting and logistic regression outperformed the others and the match data with wider range(1991-2017) has worse overfitting issue compare to match data with narrower range(2009-2017), the following graphs show the test set score on both wide range and narrow range using different model and data pairs.
+![image1](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%202/Images/test_score.png)
+![image2](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%202/Images/test_score_no_pts.png)
+3. We further used the bootstrapping method to randomly pick examples from testing set to see the consistency of accuracy score it produced, our clear winner was gradient boosting paired with model-based feature selection model, the boostrappin result was showing below(picked 500 examples in each iteration, 2000 iterations in total), it reached an average test score of 92.94%. The drawback of gradient boosting might be the time it cost to train the model, however, it might not be an issue for the sports bidding companies if the model do not have to update frequently.
+![image4](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%202/Images/Gradient_boostingall_feature_drop_oppo_tree.png)
+4. We compared results between traditional ML models and deep learning models, with lack of computation resource to tune the best hyperparameters, traditional ML models outperformed the deep learning models in this project. We also used the best model of our traditional ML and deep learning to predict winning percentage of a certain player in a match, the number mostly agree with each other between the two.
+
+
+
+
 
 
 ## Next step
 1. Due to computation resource limit, the training set size we used was only around 10K to 12K, however, we could potentially generate more than 50K of training examples for our model, this could be further improve our variance issue and get more general prediction model.
-2. We have used stats from previous 10 matches as our features, this could be tuned to the optimal level as well, especially for RNN model that takes a time sequence of events, using different number of matches can potentially improve our model.
-3. The outcome variable we have chosen in this project is the binary win/lose outcome(or winning/losing percentage), we could easily change to different outcome we would like to predict, such as total score difference(regression problem).
-4. In this project, we did not examine the examples that the model failed to predict correctly, there might exist a pattern, for example, model may be more fragile dealing with two players with close ranking points. We could add more features to deal with special cases to improve accuracy further.
+2. When doing the feature selection, model-based seemed to perform better, we chose 500 features as a random number, but in fact we might be able to reduce further while still keeping the predicting power as well as reduce the training time.
+3. We have used stats from previous 10 matches as our features, this could be tuned to the optimal level as well, especially for RNN model that takes a time sequence of events, using different number of matches can potentially improve our model.
+4. The outcome variable we have chosen in this project is the binary win/lose outcome(or winning/losing percentage), we could easily change to different outcome we would like to predict, such as total score difference(regression problem).
+5. In this project, we did not examine the examples that the model failed to predict correctly, there might exist a pattern, for example, model may be more fragile dealing with two players with close ranking points. We could add more features to deal with special cases to improve accuracy further.
+6. We found a lot of overfitting problem using deep learning RNN model, this may also be solved by getting more training examples.
 
 
 
