@@ -46,6 +46,8 @@ The prediction outcome variable will not only produce a binary value like 0 or 1
 
 **Complete notebook**: [Modeling](https://github.com/george1577/Thinkful_Data_Science/blob/master/Capstone%20project/Capstone%20project%202/Modeling/Modeling.ipynb)
 
+[**Complete report**](https://github.com/george1577/Thinkful_Data_Science/tree/master/Capstone%20project/Capstone%20project%202/Report)
+
 
 
 
