@@ -2,7 +2,8 @@
 
 ## Problem: Tennis match prediction
 ![Images](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%202/Images/atp_tennis.jpg)
-
+### Abstract
+In this project, our goal is to use stats from previous matches players played as features to predict their future matches outcome. We used both traditional machine learning models as well as deep learning models to compare the result. We have also done feature selection and engineering to extract the most valuable features for our model. We were able to reach nearly 93% of test set accuracy consistently and also use it to predict the winning/losing percentage of a player in a certain match, which could be a potential application for sports bidding companies to use as a reference to set up the odds of every single upcoming match.
 ### Introduction
 [Tennis](https://en.wikipedia.org/wiki/Tennis) is a racket sport that can be played individually against a single opponent or between two teams of two players each. Each player uses a tennis racket that is strung with cord to strike a hollow rubber ball covered with felt over or around a net and into the opponent's court. The [history](https://en.wikipedia.org/wiki/History_of_tennis) of tennis sports can be traced back to 16th century when it was really popular in royals. 
 
