@@ -2,7 +2,8 @@
 
 # Problem: Diabetes Onset Detection
 ![Images](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%201/Images/Diabetes-Care-Devices-Market.png)
-
+## Abstract
+In this project we have used data cleaning/wrangling, exploratory data analysis, feature engineering for our raw data treatment and compare different machine learning model performance to predict the onset of diabetes from subjects. We use both accuracy and f1 score as our evaluation metrics. We found the support vector machine paired with median-min-max data treatment to be our best model that can reach over 77% of accuracy and decision tree with median-min-max-PCA data treatment to reach f1 score around 0.71 to be the best among all.
 ## Introduction
 Diabetes mellitus is characterized by abnormally high levels of sugar (glucose) in the blood. When the amount of glucose in the blood increases, it triggers the release of the hormone insulin from the pancreas. Insulin stimulates muscle and fat cells to remove glucose from the blood and stimulates the liver to metabolize glucose, causing the blood sugar level to decrease to normal levels.
 ![Chart](https://raw.githubusercontent.com/george1577/Thinkful_Data_Science/master/Capstone%20project/Capstone%20project%201/Images/Diabetes_chart.jpg)
